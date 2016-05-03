@@ -1,0 +1,186 @@
+
+<!DOCTYPE html> <!-- The DOCTYPE tells the browser what kind of document this is (HTML) -->
+<head> <!-- The head tag includes important information about the page -->
+  <meta charset="UTF-8"> <!-- This line defines something called "character encoding"
+  This will allow the browser to display certain characters (such as non-Roman letters) correctly.
+  You should include this line in the head of all of your webpages. -->
+  <title>My Notes</title> <!-- This is the title of your page (what appears in the name of a browser tab) -->
+  <link rel="stylesheet" href="style.css"> <!-- This line links your CSS stylesheet to your HTML (see Lesson 1.3) -->
+</head>
+<body> <!-- The body tag is where the "flesh" of your HTML goes -->
+  <!-- Write your HTML here -->
+  <div class="TOC">
+    <h1> Notes-Programming </h1>
+    <ol>
+      <li><a href="#lesson-1">Lesson 1: The basics of the Web and HTML</a>
+        <ul>
+          <li><a href="#lesson-1-1">How the Web Works</a></li>
+          <li><a href="#lesson-1-2">HTML</a></li>
+          <li><a href="#lesson-1-3">HTML Tags</a></li>
+          <li><a href="#lesson-1-4">HTML Attributes</a></li>
+          <li><a href="#lesson-1-5">Inline elements and block element</a></li>
+          <li><a href="#lesson-1-6">Others</a></li>
+        </ul>
+      </li>
+      <li class="TOC-lesson"><a href="#lesson-2">Lesson 2: Creating a Structured Document with HTML</a>
+        <ul>
+          <li><a href="#lesson-2-1">HTML - CSS - DOM</a></li>
+          <li><a href="#lesson-2-2">Developer Tools</a></li>
+          <li><a href="#lesson-2-3">Boxes and HTML</a></li>
+          <li><a href="#lesson-2-4">Box Sizing and Positioning</a></li>
+          <li><a href="#lesson-2-5">Using Flex</a></li>
+        </ul>
+      </li>
+      <li class="TOC-lesson"><a href="#lesson-3">Lesson 3: Adding CSS Style to HTML Structure</a>
+        <ul>
+          <li><a href="#lesson-3-1">Box Sizing and Positioning</a></li>
+          <li><a href="#lesson-3-2">Using Flex</a></li>
+        </ul>
+      </li>
+    </ol>
+  <div class="lesson" id="lesson-1">
+    <h2>Lesson 1: The basics of the Web and HTML</h2>
+    <div class="concept"  id="lesson-1-1">
+      <div class="concept-title">
+      <h3>How the Web Works</h3>
+      </div>
+    <div class="concept-description">
+      <p>
+      Computer--HTTP-->Server-->HTML
+      </p>
+    </div>
+    </div>
+    <div class="concept" id="lesson-1-2">
+    <div class="concept-title">
+      <h3>HTML</h3>
+    </div>
+      <div class="concept-description">
+        <p>
+          HTML:Hyper Text Markup Language.
+        </p>
+      </div>
+    </div>
+    <div class="concept" id="lesson-1-3">
+    <div class="concept-title">
+      <h3> HTML Tags</h3>
+    </div>
+    <div class="concept-description">
+      <p>
+        bold &lt;b&gt;, italic &lt;em&gt;, line break &lt;br&gt;,
+        paragraph &lt;p&gt;, box containter  &lt;div&gt;,
+        inline container &lt;span&gt;
+      </p>
+    </div>
+  </div>
+  <div class="concept" id="lesson-1-4">
+  <div class="concept-title">
+      <h3>HTML Attributes</h3>
+    </div>
+    <div class="concept-description">
+      <p>
+        URL <a href="url">link</a>,
+        Insert img <img src="https://discussions.udacity.com/uploads/default/original/3X/8/3/83d486e324ca1065905641d8295baf3a066e1aae.png" alt="text"> <br>
+      </p>
+    </div>
+  </div>
+  <div class="concept" id="lesson-1-5">
+  <div class="concept-title">
+      <h3> Inline elements and block element</h3>
+    </div>
+    <div class="concept-description">
+      <p>
+        The main differences between inline and block elements is, that block elements have an invivisible frame.
+      </p>
+    </div>
+  </div>
+  <div class="concept" id="lesson-1-6">
+  <div class="concept-title">
+      <h3> Others </h3>
+    </div>
+    <div class="concept-description">
+      <p>
+        the great than and less than signs can be shown as &gt; &lt;.
+      </p>
+    </div>
+  </div>
+</div>
+
+  <div class="lesson"  id="lesson-2">
+  <h2> Lesson 2: Creating a Structured Document with HTML</h2>
+  <div class="concept"  id="lesson-2-1">
+    <div class="concept-title">
+      <h3> HTML - CSS - DOM </h3>
+    </div>
+    <div class="concept-description">
+      <p>
+        HTML - HyperText Markup Language<br>
+          - Page structure.<br>
+        CSS - Cascading Style Sheets<br>
+          - Page style<br>
+        DOM - Document Object Model<br>
+          -Tree structure, called the DOM tree.
+      </p>
+    </div>
+  </div>
+  <div class="concept"  id="lesson-2-2">
+    <div class="concept-title">
+      <h3> Developer Tools </h3>
+    </div>
+    <div class="concept-description">
+      <p>
+        To see the source code of the page using <b>Develpper Tools</b> in the Chrome browser (Shortcut key: F12).
+      </p>
+    </div>
+  </div>
+  <div class="concept"  id="lesson-2-3">
+    <div class="concept-title">
+      <h3> Boxes and HTML </h3>
+    </div>
+    <div class="concept-description">
+      <p>
+        All visible elements are shown in rectangular boxes.<br>
+        (Border-radius: square --> circle) <br>
+        Boxifying Design <br>
+        Boxes to HTML <br>
+      </p>
+    </div>
+  </div>
+</div>
+  <div class="lesson"  id="lesson-3">
+    <h2>Lesson 3: Adding CSS style to HTML Structure</h2>
+  <div class="concept"  id="lesson-3-1">
+    <div class="concept-title">
+      <h3> Box Sizing and Positioning </h3>
+    </div>
+    <div class="concept-description">
+      <p>
+        Set sizes in terms of percentages rather than pixels.<br>
+        Different browsers work slightly differently. <br>
+        Adding the rule display: flex; to the appropriate CSS will override this behavior and let divs appear next to each other.<br>
+      </p>
+    </div>
+  </div>
+  <div class="concept"  id="lesson-3-2">
+    <div class="concept-title">
+      <h3> Using Flex </h3>
+    </div>
+    <div class="concept-description">
+      <div class="img-flex">
+        <div class="img-bb8-25">
+          <img src="https://media.guim.co.uk/977085bbc667cb2819958790264d2d4fdb6ca689/0_0_2100_1260/master/2100.jpg" alt="bb8" style="
+    width: 200px;">
+        </div>
+        <div class="img-bb8-50">
+          <img src="https://media.guim.co.uk/977085bbc667cb2819958790264d2d4fdb6ca689/0_0_2100_1260/master/2100.jpg" alt="bb8" style="
+    width: 200px;">
+        </div>
+        <div class="img-bb8-25">
+          <img src="https://media.guim.co.uk/977085bbc667cb2819958790264d2d4fdb6ca689/0_0_2100_1260/master/2100.jpg" alt="bb8" style="
+    width: 200px;">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
