@@ -49,6 +49,10 @@ def fish_in_pool(fishes, pool):
 			return fish
 		return None 
 
+# print language pack
+welcome = "*" * 50 + "\n" + "  Welcome to this quiz. \n  Please select difficulty by typing it in." + "\n" + "*" * 50
+congratulation = "*" * 50 + "\n" + "  Congratulation! You have completed this quiz! " + "\n" + "*" * 50
+sorry = "*" * 50 + "\n" + "  Sorry! You lost the game! " + "\n" + "*" * 50
 # Check the answer
 def check_answer(user_input_answer, answer, index_blank):
 	if user_input_answer == answer[index_blank]:
@@ -57,48 +61,49 @@ def check_answer(user_input_answer, answer, index_blank):
 		return 'Incorrect'
 
 #1 welcome, level type in
-print 'Welcome to this quiz.'
-print 'Please select difficulty by typing it in.'
+print welcome
 user_input_level = raw_input( "Possible choices are easy, medium, and hard: "" ")
 
 #2 Choose level: easy, medium, hard. Return: level, quiz, answer.
 def level_chosen(user_input_level):
-	while user_input_level not in levels:
-		user_input_level = raw_input( "Wrong input! \nPossible choices are easy, medium, and hard: "" ")
+#	while user_input_level not in levels:
+#		user_input_level = raw_input( "Wrong input! \nPossible choices are easy, medium, and hard: "" ")
 	if user_input_level == 'easy':
-		return easy_quiz
+		return easy_quiz, easy_answer
 	if user_input_level == 'medium':
-		return medium_quiz
+		return medium_quiz, medium_answer
 	else:
-		return hard_quiz
+		return hard_quiz, hard_answer
 
 print ("You've chosen " + user_input_level + "." +"\n")
 print ("You will get 5 guesses per problem." + "\n")
 print ("The quiz is: ")
-print (level_chosen(user_input_level) + "\n")
+print (level_chosen(user_input_level)[0] + "\n")
 
 #3 The game body
 def fill_in_blanks():
-	quiz = level_chosen(user_input_level)
-	answer = easy_answer
-	replaced = []
+	quiz = level_chosen(user_input_level)[0]
+	answer = level_chosen(user_input_level)[1]
 	index_blank = 0
-	num_try = 0
-#	quiz = quiz.split()
-#	while num_try < 5:
-	while index_blank < len(white_blanks) and num_try < 5:
-		num_try = 0
+	num_try = 1
+	while index_blank < len(white_blanks):
 		user_input_answer = raw_input("What should be filled in for " + str(white_blanks[index_blank]) + "? ")
-		while check_answer(user_input_answer, answer, index_blank) == 'Incorrect':
+		while check_answer(user_input_answer, answer, index_blank) == 'Incorrect' and num_try < 5:
+			print "You have " + str(5 - num_try) + " try left"
 			user_input_answer = raw_input("The answer is wrong,  try again: " + " ")
-			num_try += 1
+			num_try += 1			
+		if num_try >= 5:
+			break
 		if check_answer(user_input_answer, answer, index_blank) == 'Correct':
 			print("Correct! \n")
 			quiz = quiz.replace(white_blanks[index_blank], user_input_answer)
 			print quiz + "\n"
 			index_blank += 1
+	if index_blank == len(white_blanks):
+		return congratulation 
+	else:
+		return sorry
 
-	return "You have completed this quiz!"
 
 print fill_in_blanks() 
 
