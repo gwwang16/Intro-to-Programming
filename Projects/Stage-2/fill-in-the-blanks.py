@@ -20,9 +20,6 @@ hard_answer = ['function', 'variables', 'nothing', 'list']
 
 white_blanks = ['___1___', '___2___', '___3___', '___4___']
 
-quizzes = [easy_quiz, medium_quiz, medium_quiz]
-answers = [easy_answer, medium_answer, hard_answer]
-
 levels = ['easy', 'medium', 'hard']
 
 # Print language bank
@@ -55,10 +52,10 @@ def fill_in_blanks():
 	quiz, answer, difficulty_chosen = level_chosen(user_input_level)
 	print ("\n" + "You've chosen " + difficulty_chosen + " difficulty." + "\n" + "*" * 50 + "\nYou will get 5 guesses per problem.\nThe quiz is: \n" + quiz + "\n")
 	index_blank, num_guess, total_guess = 0, 1, 5
-	while index_blank < len(white_blanks) and num_guess < total_guess: #1 there have to check if the tries exceeded. This tries check make the game end... 
+	while index_blank < len(white_blanks) and num_guess < total_guess: #1 there have to check if the tries exceeded two times. This tries check make the game end... 
 		num_guess = 1 # guess number reset
 		user_input_answer = raw_input("What should be filled in for " + str(white_blanks[index_blank]) + "? ")
-		while check_answer(user_input_answer, answer, index_blank) == 'Incorrect' and num_guess < total_guess:#1 this tries check make the answer input stop 
+		while check_answer(user_input_answer, answer, index_blank) == 'Incorrect' and num_guess < total_guess:#1 this tries check make the answer_input stop. I tried to remove one of them, but the results output are not satisfactory...
 			print "You have " + str(total_guess - num_guess) + " try left"
 			user_input_answer = raw_input("The answer is wrong, try again: " + " ")
 			num_guess += 1		
@@ -68,7 +65,7 @@ def fill_in_blanks():
 		index_blank += 1
 	if index_blank == len(white_blanks):
 		return congratulation 
-	return sorry
+	return sorry # I have tried my best to shorten this function... But it still longer than 18 lines...:(
 
 print welcome
 print fill_in_blanks() 
