@@ -7,12 +7,14 @@ the_intouchables = media.Movie("The Intouchables",
 	"https://www.youtube.com/watch?v=34WIbmXkewU")
 
 before_midnight = media.Movie("Before Midnight", 
-	"We meet Jesse and Celine nine years on in Greece. Almost two decades have passed since their first meeting on that train bound for Vienna.", 
+	"We meet Jesse and Celine nine years on in Greece. "
+	"Almost two decades have passed since their first meeting on that train bound for Vienna.", 
 	"https://upload.wikimedia.org/wikipedia/en/a/ad/Before_Midnight_poster.jpg", 
 	"https://www.youtube.com/watch?v=euOJkb0U8vE")
 
 kung_fu_panda3 = media.Movie("Kung Fu Panda 3", 
-	"In the Valley of Peace, Po the Panda finds himself chosen as the Dragon Warrior despite the fact that he is obese and a complete novice at martial arts.", 
+	"In the Valley of Peace, Po the Panda finds himself chosen as the Dragon Warrior "
+	"despite the fact that he is obese and a complete novice at martial arts.", 
 	"https://upload.wikimedia.org/wikipedia/en/e/e6/Kung_Fu_Panda_3_poster.jpg", 
 	"https://www.youtube.com/watch?v=10r9ozshGVE")
 
@@ -35,4 +37,3 @@ spotlight = media.Movie("Spotlight",
 
 movies = [the_intouchables, before_midnight, kung_fu_panda3, gravity, interstellar, spotlight]
 fresh_tomatoes.open_movies_page(movies)
-print (media.Movie.VALID_RATINGS)
